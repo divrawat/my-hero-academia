@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Head from 'next/head';
 import { APP_NAME, DOMAIN, MANGA_NAME, NEXT_PREVIOUS_PREFIX, IMAGE_PREFIX, CHAPTER_PREFIX, AUTHOR_PAGE, LOGO_URL, chaptersData } from '@/config';
 import DisqusComments from '@/components/DisQus';
+export const runtime = 'experimental-edge';
 
 export default function Chapter({ chapterNumber, imageUrls, totalChapters, params, errorcode }) {
 
@@ -26,7 +27,7 @@ export default function Chapter({ chapterNumber, imageUrls, totalChapters, param
     const nextChapter = chapterIndex < totalChapters - 1 ? chaptersData[chapterIndex + 1].chapterNumber : null;
 
 
-    const DESCRIPTION = `Enjoy reading ${MANGA_NAME} chapter ${chapterNumber} online at ${DOMAIN}. This series is about Izuku Midoriya, a boy born without superpowers in a world where they are common. He enrolls in a prestigious hero academy to become a top hero after inheriting the powerful Quirk of All Might, the world's greatest hero.`
+    const DESCRIPTION = `Read ${MANGA_NAME} chapter ${chapterNumber} online. This series is about Izuku Midoriya, a boy born without superpowers in a world where they are common. He enrolls in a prestigious hero academy to become a top hero after inheriting the powerful Quirk of All Might, the world's greatest hero.`
 
 
     const URL = params.chapter;
